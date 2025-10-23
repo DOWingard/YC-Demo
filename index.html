@@ -27,48 +27,93 @@
         --shadow: 0 6px 18px rgba(15,23,42,0.08);
         font-family: Inter, Roboto, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
       }
-      .projection-wrap {
+
+      body {
+        background: var(--bg);
+        margin: 0;
+      }
+
+      header {
+        text-align: center;
+        padding: 24px;
+        background: var(--card);
+        box-shadow: var(--shadow);
+      }
+
+      header img {
+        height: 60px;
+        margin-bottom: 12px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      .main-menu {
+        list-style: none;
+        padding: 0;
+        margin: 12px 0 0 0;
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .main-menu a {
+        text-decoration: none;
+        color: var(--accent);
+        font-weight: 500;
+        padding: 6px 10px;
+      }
+
+      .main-menu a.active {
+        border-bottom: 2px solid var(--accent);
+      }
+
+      #container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .inner {
         width: 100%;
         max-width: var(--maxw);
-        margin: 36px auto;
-        padding: 0 18px;
-      }
-      .projection-card {
+        margin: 36px 18px;
         background: var(--card);
         border-radius: 12px;
-        padding: 28px;
         box-shadow: var(--shadow);
+        padding: 28px;
         box-sizing: border-box;
       }
-      .projection-card h1 {
-        margin: 0 0 6px 0;
+
+      h2 {
+        margin-top: 40px;
         font-size: 20px;
       }
-      .projection-card h2 {
-        font-size: 16px;
-        margin: 20px 0 8px 0;
-      }
-      .projection-card p {
-        margin: 0 0 12px 0;
+
+      p, li {
         line-height: 1.55;
       }
-      .projection-card ul {
-        margin: 8px 0 12px 20px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border-radius: 6px;
+        box-shadow: var(--shadow);
       }
-      .meta, .section-note {
-        font-size: 13px;
-        color: var(--muted);
+
+      /* Add spacing after images to separate from next title */
+      img + h2 {
+        margin-top: 50px !important;
       }
-      .projection-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        margin-top: 16px;
+
+      .content-region {
+        display: none;
       }
-      @media (max-width: 700px) {
-        .projection-grid {
-          grid-template-columns: 1fr;
-        }
+
+      .content-region:first-of-type {
+        display: block;
       }
     </style>
   </head>
@@ -88,7 +133,7 @@
     <div id="container">
       <div class="inner">
         <div id="content">
-          
+
           <!-- Home / Current Status -->
           <div id="current-status" class="content-region">
             <h2>Current Status since 10/12</h2>
@@ -101,39 +146,32 @@
             </ul>
 
             <p>We also have a small but growing group of interested Influencers/Artists, as well as an interested potential partner within the music advertising industry.</p>
-            
-            <p>
-              The <a href="https://github.com/DOWingard/Analytics-Dashboard">Analytics Dashboard</a> presents a simple live plot of data stored in a SQL database:
-            </p>
-            <img src="images/charts.png" alt="Competition" style="max-width:100%; height:auto; margin-top:10px;">
 
-            <p>
+            <p>The <a href="https://github.com/DOWingard/Analytics-Dashboard">Analytics Dashboard</a> presents a simple live plot of data stored in a SQL database:</p>
+            <img src="images/charts.png" alt="Competition">
 
+            <p>The <a href="https://www.canva.com/design/DAG2Shr5ZnA/omh515O8PKpyGZHoWszDSA/edit?utm_content=DAG2Shr5ZnA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Pitch Deck</a>:</p>
+            <img src="images/weeds.jpg" alt="Pitch Deck">
 
-              The <a href="https://www.canva.com/design/DAG2Shr5ZnA/omh515O8PKpyGZHoWszDSA/edit?utm_content=DAG2Shr5ZnA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Pitch Deck</a>:
-            </p>
-            <img src="images/weeds.jpg" alt="Pitch Deck" style="max-width:100%; height:auto; margin-top:10px;">
-
-            <p>
-
-              
-              We have a <a href="https://www.canva.com/design/DAG163H576E/yCYNMUNHgk7_46nTFuwNyA/edit?utm_content=DAG163H576E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">wireframe flowchart</a>.
-            </p>
-            <img src="images/wireframeFlowchart.png" alt="Wireframe Flowchart" style="max-width:100%; height:auto; margin-top:10px;">
+            <p>We have a <a href="https://www.canva.com/design/DAG163H576E/yCYNMUNHgk7_46nTFuwNyA/edit?utm_content=DAG163H576E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">wireframe flowchart</a>.</p>
+            <img src="images/wireframeFlowchart.png" alt="Wireframe Flowchart">
           </div>
 
           <!-- Overview -->
-          <div id="overview" class="content-region" style="display:none;">
+          <div id="overview" class="content-region">
             <h2>Overview</h2>
             <p>Overview content goes here.</p>
           </div>
 
           <!-- Projections -->
-          <div id="projections" class="content-region" style="display:none;">
+          <div id="projections" class="content-region">
             <h2>Projections</h2>
             <p>I have a 10-year projection that scales globally (US, China, Mexico, Japan) at reasonable growth. Virality will only accelerate it.</p>
-            <img src="images/10yearProjection.png" alt="10-year projection" style="max-width:100%; height:auto; margin-top:10px;">
-
+            <img src="images/10yearProjection.png" alt="10-year projection">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Section Switching -->
     <script>
