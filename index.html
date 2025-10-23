@@ -5,16 +5,72 @@
     <title>Live for YC W26 Application Cycle</title>
     <meta name="description" content="A brief description of your site for search engines">
     <meta name="author" content="Information about the author here">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- Stylesheets -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- Embedded projection section styles -->
+    <style>
+      :root {
+        --maxw: 900px;
+        --muted: #6b7280;
+        --accent: #0f172a;
+        --card: #ffffff;
+        --bg: #f7fafc;
+        --shadow: 0 6px 18px rgba(15,23,42,0.08);
+        font-family: Inter, Roboto, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
+      }
+      .projection-wrap {
+        width: 100%;
+        max-width: var(--maxw);
+        margin: 36px auto;
+        padding: 0 18px;
+      }
+      .projection-card {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+        box-sizing: border-box;
+      }
+      .projection-card h1 {
+        margin: 0 0 6px 0;
+        font-size: 20px;
+      }
+      .projection-card h2 {
+        font-size: 16px;
+        margin: 20px 0 8px 0;
+      }
+      .projection-card p {
+        margin: 0 0 12px 0;
+        line-height: 1.55;
+      }
+      .projection-card ul {
+        margin: 8px 0 12px 20px;
+      }
+      .meta, .section-note {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .projection-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 16px;
+      }
+      @media (max-width: 700px) {
+        .projection-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -25,199 +81,122 @@
       <ul class="main-menu">
         <li><a href="#current-status">Home</a></li>
         <li><a href="#overview">About</a></li>
-        <li><a href="#Projections">Contact</a></li>
+        <li><a href="#projections">Contact</a></li>
       </ul>
     </header>
 
     <div id="container">
       <div class="inner">
         <div id="content">
+          
+          <!-- Home / Current Status -->
           <div id="current-status" class="content-region">
             <h2>Current Status since 10/12</h2>
-            <p>
-              We have built the following:
-              <ul>
-                <li>React Native app scaffolding</li>
-                <li>Initial custom live analytics dashboard with interactive console</li>
-                <li>Main project hosted in GitLab for sophisticated CI/CD tools</li>
-                <li>Firebase authentication with MongoDB setup ready to host on Render.com</li>
-                <li>Wireframe flowcharts</li>
-              </ul>
-              We also have a small but growing group of interested Influencers/Artists, as well as an interested potential partner within the music advertising industry
-            </p>
+            <ul>
+              <li>React Native app scaffolding</li>
+              <li>Initial custom live analytics dashboard with interactive console</li>
+              <li>Main project hosted in GitLab for sophisticated CI/CD tools</li>
+              <li>Firebase authentication with MongoDB setup ready to host on Render.com</li>
+              <li>Wireframe flowcharts</li>
+            </ul>
+            <p>We also have a small but growing group of interested Influencers/Artists, as well as an interested potential partner within the music advertising industry.</p>
             
-            </p>The <a href="https://github.com/DOWingard/Analytics-Dashboard">Analytics Dashboard</a> presents a simple 1 financial plot:
-             <img src="images/charts.png" alt="Competition" style="max-width:100%; height:auto; margin-top:10px;">
+            <p>
+              The <a href="https://github.com/DOWingard/Analytics-Dashboard">Analytics Dashboard</a> presents a simple live plot of data stored in a SQL database:
+            </p>
+            <img src="images/charts.png" alt="Competition" style="max-width:100%; height:auto; margin-top:10px;">
 
-            <p>The <a href="https://www.canva.com/design/DAG2Shr5ZnA/omh515O8PKpyGZHoWszDSA/edit?utm_content=DAG2Shr5ZnA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Pitch Deck</a>:
+            <p>
+              The <a href="https://www.canva.com/design/DAG2Shr5ZnA/omh515O8PKpyGZHoWszDSA/edit?utm_content=DAG2Shr5ZnA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Pitch Deck</a>:
+            </p>
+            <img src="images/weeds.jpg" alt="Pitch Deck" style="max-width:100%; height:auto; margin-top:10px;">
 
-            <img src="images/weeds.jpg" alt="Competition" style="max-width:100%; height:auto; margin-top:10px;">
             <p>
               We have a <a href="https://www.canva.com/design/DAG163H576E/yCYNMUNHgk7_46nTFuwNyA/edit?utm_content=DAG163H576E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">wireframe flowchart</a>.
             </p>
             <img src="images/wireframeFlowchart.png" alt="Wireframe Flowchart" style="max-width:100%; height:auto; margin-top:10px;">
           </div>
 
-          <div id="overview" class="content-region">
+          <!-- Overview -->
+          <div id="overview" class="content-region" style="display:none;">
             <h2>Overview</h2>
-            <p>
-              Overview content goes here.
-            </p>
+            <p>Overview content goes here.</p>
           </div>
 
-          <div id="Projections" class="content-region">
-            <h2>projections</h2>
-            <p>
-              I have a 10 year projection that scales globally (US, China, Mexico, Japan) at reasonable growth. Virality will only accelerate it.
-              <img src="images/10yearProjection.png" alt="10-year projection" style="max-width:100%; height:auto; margin-top:10px;">
-              Breakdown:
-              <!doctype html>
-              <html lang="en">
-              <head>
-                <meta charset="utf-8" />
-                <meta name="viewport" content="width=device-width,initial-scale=1" />
-                <title>10-Year Global Scaling Financial Projection</title>
-                <style>
-                  :root{
-                    --maxw:900px;
-                    --muted:#6b7280;
-                    --accent:#0f172a;
-                    --card:#ffffff;
-                    --bg:#f7fafc;
-                    --shadow: 0 6px 18px rgba(15,23,42,0.08);
-                    font-family: Inter, Roboto, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
-                  }
-                  html,body{height:100%;}
-                  body{
-                    margin:0;
-                    background:var(--bg);
-                    color:#0b1220;
-                    -webkit-font-smoothing:antialiased;
-                    -moz-osx-font-smoothing:grayscale;
-                    display:flex;
-                    align-items:flex-start;
-                    justify-content:center;
-                    padding:36px 18px;
-                    box-sizing:border-box;
-                  }
-                  .wrap{
-                    width:100%;
-                    max-width:var(--maxw);
-                  }
-                  .card{
-                    background:var(--card);
-                    border-radius:12px;
-                    padding:28px;
-                    box-shadow:var(--shadow);
-                    box-sizing:border-box;
-                  }
-                  header h1{margin:0 0 6px 0;font-size:20px;}
-                  header p{margin:0;color:var(--muted);font-size:14px;}
-                  h2{font-size:16px;margin:20px 0 8px 0;}
-                  p{margin:0 0 12px 0;line-height:1.55;}
-                  ul{margin:8px 0 12px 20px;}
-                  pre{background:#0b1220;color:#fff;padding:12px;border-radius:8px;overflow:auto;}
-                  .meta{font-size:13px;color:var(--muted);margin-top:8px;}
-                  .section-note{font-size:13px;color:var(--muted);margin-top:6px;}
-                  .grid{
-                    display:grid;
-                    grid-template-columns:1fr 1fr;
-                    gap:16px;
-                    margin-top:16px;
-                  }
-                  @media (max-width:700px){
-                    .grid{grid-template-columns:1fr;}
-                  }
-                </style>
-              </head>
-              <body>
-                <div class="wrap">
-                  <div class="card" role="main">
-                    <header>
-                      <h1>10-Year Global Scaling Financial Projection</h1>
-                      <p class="meta">Summary of assumptions, growth, revenue, costs, and profitability metrics (monthly resolution).</p>
-                    </header>
+          <!-- Projections -->
+          <div id="projections" class="content-region" style="display:none;">
+            <h2>Projections</h2>
+            <p>I have a 10-year projection that scales globally (US, China, Mexico, Japan) at reasonable growth. Virality will only accelerate it.</p>
+            <img src="images/10yearProjection.png" alt="10-year projection" style="max-width:100%; height:auto; margin-top:10px;">
 
-                    <section id="user-growth">
-                      <h2>1. User Growth</h2>
-                      <p><strong>Initial user base:</strong> 50 active users.</p>
-                      <p><strong>Target user base:</strong> ~1,000,000 users by Year 5; ~2,000,000 users by Year 10.</p>
-                      <p><strong>Growth pattern:</strong> Smooth and consistent global scaling — accelerating early adoption and gradually slowing as the platform reaches widespread adoption.</p>
-                      <p><strong>Temporal resolution:</strong> Monthly, to capture gradual growth without artificial jumps or spikes.</p>
-                    </section>
+            <div class="projection-wrap">
+              <div class="projection-card" role="main">
+                <header>
+                  <h1>10-Year Global Scaling Financial Projection</h1>
+                  <p class="meta">Summary of assumptions, growth, revenue, costs, and profitability metrics (monthly resolution).</p>
+                </header>
 
-                    <section id="revenue-assumptions">
-                      <h2>2. Revenue Assumptions</h2>
-                      <ul>
-                        <li><strong>Average revenue per user (ARPU):</strong> $50 / month (includes subscriptions, platform fees, listing fees).</li>
-                        <li><strong>Revenue behavior:</strong> Scales proportionally with active users.</li>
-                        <li><strong>Growth dynamics:</strong> No sudden spikes — revenue increases steadily with user adoption.</li>
-                      </ul>
-                      <p class="section-note"><strong>Rationale:</strong> Conservative, realistic estimate avoiding overestimation from viral scenarios.</p>
-                    </section>
+                <section>
+                  <h2>1. User Growth</h2>
+                  <p><strong>Initial user base:</strong> 50 active users.</p>
+                  <p><strong>Target user base:</strong> ~1,000,000 users by Year 5; ~2,000,000 users by Year 10.</p>
+                  <p><strong>Growth pattern:</strong> Smooth and consistent global scaling — accelerating early adoption and gradually slowing as the platform reaches widespread adoption.</p>
+                </section>
 
-                    <section id="cost-assumptions">
-                      <h2>3. Cost Assumptions</h2>
-                      <p><strong>Cost components:</strong></p>
-                      <ul>
-                        <li>Cloud infrastructure and hosting</li>
-                        <li>Team salaries and personnel costs</li>
-                        <li>Marketing and operational expenses</li>
-                      </ul>
+                <section>
+                  <h2>2. Revenue Assumptions</h2>
+                  <ul>
+                    <li><strong>ARPU:</strong> $50 / month</li>
+                    <li><strong>Revenue behavior:</strong> Scales proportionally with active users.</li>
+                    <li><strong>Growth dynamics:</strong> No sudden spikes — steady increase with user adoption.</li>
+                  </ul>
+                </section>
 
-                      <p><strong>Cost behavior:</strong> Costs increase initially with growth, then flatten as economies of scale are achieved.</p>
+                <section>
+                  <h2>3. Cost Assumptions</h2>
+                  <ul>
+                    <li>Cloud infrastructure and hosting</li>
+                    <li>Team salaries and personnel costs</li>
+                    <li>Marketing and operational expenses</li>
+                  </ul>
+                  <p><strong>Behavior:</strong> Costs increase initially with growth, then flatten with scale.</p>
+                </section>
 
-                      <p><strong>Ranges (10-year total / annualized context):</strong></p>
-                      <ul>
-                        <li>Cloud infrastructure: $0.01M to $8M</li>
-                        <li>Salaries: $0.05M to $3M</li>
-                        <li>Marketing: $0.01M to $3M</li>
-                      </ul>
-                    </section>
+                <section>
+                  <h2>4. Profitability Metrics</h2>
+                  <p>Net profit = Total revenue − Total costs (per period).</p>
+                  <p>Cumulative profit = Sum of net profit over time (monthly aggregation).</p>
+                </section>
 
-                    <section id="profitability-metrics">
-                      <h2>4. Profitability Metrics</h2>
-                      <p><strong>Net profit:</strong> Total revenue minus total costs (per period).</p>
-                      <p><strong>Cumulative profit:</strong> Sum of net profit over time (cumulative, monthly aggregation).</p>
-                      <p><strong>Visualization:</strong> Shaded areas in plots should indicate profit vs. operating deficit periods (profit > 0 vs. profit &lt;= 0).</p>
-                    </section>
+                <section>
+                  <h2>5. Simplifying Assumptions</h2>
+                  <ul>
+                    <li>No explicit user churn or region-specific adoption differences.</li>
+                    <li>Constant ARPU over time.</li>
+                    <li>Uniform global adoption.</li>
+                    <li>Costs flatten naturally with growth.</li>
+                  </ul>
+                </section>
 
-                    <section id="simplifying-assumptions">
-                      <h2>5. Simplifying Assumptions</h2>
-                      <ul>
-                        <li>No explicit user churn, subscription tiering, or regional adoption differences included.</li>
-                        <li>ARPU is constant over time.</li>
-                        <li>Global adoption assumed uniform (no market-specific spikes).</li>
-                        <li>Costs flatten naturally with growth but aren’t modeled per-user for simplicity.</li>
-                      </ul>
-                    </section>
-
-                    <div class="grid">
-                      <div>
-                        <h2>Notes</h2>
-                        <p class="section-note">This projection is intentionally conservative and simplified to support high-level planning. For operational forecasting, introduce churn, retention, variable ARPU, and region-specific adoption curves.</p>
-                      </div>
-
-                      <div>
-                        <h2>Next steps</h2>
-                        <ul>
-                          <li>Convert these assumptions into a monthly time series (months 0–120).</li>
-                          <li>Compute monthly revenue = users × ARPU.</li>
-                          <li>Distribute cost ranges across months with a sensible ramp and flatten schedule (e.g., logistic or piecewise linear ramp).</li>
-                          <li>Plot revenue, costs, net profit, and cumulative profit; shade profit vs. deficit periods.</li>
-                        </ul>
-                      </div>
-                    </div>
-
+                <div class="projection-grid">
+                  <div>
+                    <h2>Notes</h2>
+                    <p class="section-note">This projection is conservative and simplified to support high-level planning.</p>
+                  </div>
+                  <div>
+                    <h2>Next Steps</h2>
+                    <ul>
+                      <li>Convert assumptions into a 120-month series.</li>
+                      <li>Compute revenue = users × ARPU.</li>
+                      <li>Distribute costs with realistic flattening.</li>
+                      <li>Plot revenue, costs, and profit trends.</li>
+                    </ul>
                   </div>
                 </div>
-              </body>
-              </html>
+              </div>
+            </div>
+          </div>
 
-                
-          </div>
-            </p>
-          </div>
         </div>
       </div>
     </div>
@@ -226,15 +205,15 @@
       Footer region
     </footer>
 
-    <!-- Custom Script -->
-    <script type="text/javascript">
+    <!-- Section Switching -->
+    <script>
       (function ($) {
-        $(window).on('load hashchange', function() {
-          $('.content-region').hide(); // hide all regions
-          var region = location.hash || $('.main-menu a:first').attr('href'); // get hash or default
-          $(region).show(); // show the selected region
+        $(window).on('load hashchange', function () {
+          $('.content-region').hide();
+          var region = location.hash || $('.main-menu a:first').attr('href');
+          $(region).show();
           $('.main-menu a').removeClass('active');
-          $('.main-menu a[href="'+ region +'"]').addClass('active'); // highlight menu
+          $('.main-menu a[href="' + region + '"]').addClass('active');
         });
       })(jQuery);
     </script>
