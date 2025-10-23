@@ -1,192 +1,117 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Live for YC W26 Application Cycle</title>
-    <meta name="description" content="A brief description of your site for search engines">
-    <meta name="author" content="Information about the author here">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="icon" type="image/png" href="favicon.png">
+<head>
+  <meta charset="utf-8">
+  <title>Live for YC W26 Application Cycle</title>
+  <meta name="description" content="A brief description of your site for search engines">
+  <meta name="author" content="Information about the author here">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Stylesheets -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
+  <!-- Stylesheets -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
-    <!-- Embedded projection section styles -->
-    <style>
-      :root {
-        --maxw: 900px;
-        --muted: #6b7280;
-        --accent: #0f172a;
-        --card: #ffffff;
-        --bg: #f7fafc;
-        --shadow: 0 6px 18px rgba(15,23,42,0.08);
-        font-family: Inter, Roboto, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
-      }
+  <style>
+    :root {
+      --maxw: 900px;
+      --muted: #6b7280;
+      --accent: #0f172a;
+      --card: #ffffff;
+      --bg: #f7fafc;
+      --shadow: 0 6px 18px rgba(15,23,42,0.08);
+      font-family: Inter, Roboto, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
+    }
+    body { background: var(--bg); margin:0; }
+    header { text-align:center; padding:24px; background: var(--card); box-shadow: var(--shadow); }
+    header img { height:60px; margin-bottom:12px; }
+    header h1 { margin:0; font-size:22px; }
+    .main-menu { list-style:none; padding:0; margin:12px 0 0 0; display:flex; justify-content:center; gap:18px; }
+    .main-menu a { text-decoration:none; color:var(--accent); font-weight:500; padding:6px 10px; }
+    .main-menu a.active { border-bottom:2px solid var(--accent); }
+    #container { display:flex; justify-content:center; }
+    .inner { width:100%; max-width:var(--maxw); margin:36px 18px; background:var(--card); border-radius:12px; box-shadow:var(--shadow); padding:28px; box-sizing:border-box; }
+    h2 { margin-top:40px; font-size:20px; }
+    p, li { line-height:1.55; }
+    img { max-width:100%; height:auto; margin-top:10px; border-radius:6px; box-shadow:var(--shadow); }
+    img + h2 { margin-top:50px !important; }
+    .content-region { display:none; }
+    .content-region:first-of-type { display:block; }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <img src="images/logo.png" alt="Logo">
+    <h1>Live for YC W26 Application Cycle</h1>
 
-      body {
-        background: var(--bg);
-        margin: 0;
-      }
+    <ul class="main-menu">
+      <li><a href="#current-status">Home</a></li>
+      <li><a href="#overview">About</a></li>
+      <li><a href="#projections">Projections</a></li>
+    </ul>
+  </header>
 
-      header {
-        text-align: center;
-        padding: 24px;
-        background: var(--card);
-        box-shadow: var(--shadow);
-      }
+  <div id="container">
+    <div class="inner">
+      <div id="content">
 
-      header img {
-        height: 60px;
-        margin-bottom: 12px;
-      }
-
-      header h1 {
-        margin: 0;
-        font-size: 22px;
-      }
-
-      .main-menu {
-        list-style: none;
-        padding: 0;
-        margin: 12px 0 0 0;
-        display: flex;
-        justify-content: center;
-        gap: 18px;
-      }
-
-      .main-menu a {
-        text-decoration: none;
-        color: var(--accent);
-        font-weight: 500;
-        padding: 6px 10px;
-      }
-
-      .main-menu a.active {
-        border-bottom: 2px solid var(--accent);
-      }
-
-      #container {
-        display: flex;
-        justify-content: center;
-      }
-
-      .inner {
-        width: 100%;
-        max-width: var(--maxw);
-        margin: 36px 18px;
-        background: var(--card);
-        border-radius: 12px;
-        box-shadow: var(--shadow);
-        padding: 28px;
-        box-sizing: border-box;
-      }
-
-      h2 {
-        margin-top: 40px;
-        font-size: 20px;
-      }
-
-      p, li {
-        line-height: 1.55;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        margin-top: 10px;
-        border-radius: 6px;
-        box-shadow: var(--shadow);
-      }
-
-      /* Add spacing after images to separate from next title */
-      img + h2 {
-        margin-top: 50px !important;
-      }
-
-      .content-region {
-        display: none;
-      }
-
-      .content-region:first-of-type {
-        display: block;
-      }
-    </style>
-  </head>
-
-  <body>
-    <header id="header">
-      <img src="images/logo.png" alt="Logo">
-      <h1>Live for YC W26 Application Cycle</h1>
-
-      <ul class="main-menu">
-        <li><a href="#current-status">Home</a></li>
-        <li><a href="#overview">About</a></li>
-        <li><a href="#projections">Contact</a></li>
-      </ul>
-    </header>
-
-    <div id="container">
-      <div class="inner">
-        <div id="content">
-
-          <!-- Home / Current Status -->
-          <div id="current-status" class="content-region">
-            <h2>Current Status since 10/12</h2>
-            <ul>
-              <li>React Native app scaffolding</li>
-              <li>Initial custom live analytics dashboard with interactive console</li>
-              <li>Main project hosted in GitLab for sophisticated CI/CD tools</li>
-              <li>Firebase authentication with MongoDB setup ready to host on Render.com</li>
-              <li>Wireframe flowcharts</li>
-            </ul>
-
-            <p>We also have a small but growing group of interested Influencers/Artists, as well as an interested potential partner within the music advertising industry.</p>
-
-            <p>The <a href="https://github.com/DOWingard/Analytics-Dashboard">Analytics Dashboard</a> presents a simple live plot of data stored in a SQL database:</p>
-            <img src="images/charts.png" alt="Competition">
-
-            <p>The <a href="https://www.canva.com/design/DAG2Shr5ZnA/omh515O8PKpyGZHoWszDSA/edit?utm_content=DAG2Shr5ZnA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Pitch Deck</a>:</p>
-            <img src="images/weeds.jpg" alt="Pitch Deck">
-
-            <p>We have a <a href="https://www.canva.com/design/DAG163H576E/yCYNMUNHgk7_46nTFuwNyA/edit?utm_content=DAG163H576E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">wireframe flowchart</a>.</p>
-            <img src="images/wireframeFlowchart.png" alt="Wireframe Flowchart">
-          </div>
-
-          <!-- Overview -->
-          <div id="overview" class="content-region">
-            <h2>Overview</h2>
-            <p>Overview content goes here.</p>
-          </div>
-
-          <!-- Projections -->
-          <div id="projections" class="content-region">
-            <h2>Projections</h2>
-            <p>I have a 10-year projection that scales globally (US, China, Mexico, Japan) at reasonable growth. Virality will only accelerate it.</p>
-            <img src="images/10yearProjection.png" alt="10-year projection">
-            Assumptions:
-
-            Over 10 years, the platform scales from 50 to about 2 million users globally, earning roughly $50 per user monthly, with steadily increasing revenue and flattening costs as operations mature. Costs grow early due to infrastructure, salaries, and marketing but stabilize over time, yielding gradual, sustainable profitability under conservative growth assumptions.
-          </div>
+        <!-- Home / Current Status -->
+        <div id="current-status" class="content-region">
+          <h2>Current Status since 10/12</h2>
+          <ul>
+            <li>React Native app scaffolding</li>
+            <li>Initial custom live analytics dashboard with interactive console</li>
+            <li>Main project hosted in GitLab for sophisticated CI/CD tools</li>
+            <li>Firebase authentication with MongoDB setup ready to host on Render.com</li>
+            <li>Wireframe flowcharts</li>
+          </ul>
+          <p></p>
+          <p>We also have a small but growing group of interested Influencers/Artists, as well as an interested potential partner within the music advertising industry.</p>
+          <p>The <a href="https://github.com/DOWingard/Analytics-Dashboard">Analytics Dashboard</a> presents a simple live plot of data stored in a SQL database:</p>
+          <img src="images/charts.png" alt="Analytics Dashboard">
+          <p></p>
+          <p>The <a href="https://www.canva.com/design/DAG2Shr5ZnA/omh515O8PKpyGZHoWszDSA/edit?utm_content=DAG2Shr5ZnA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Pitch Deck</a>:</p>
+          <img src="images/weeds.jpg" alt="Pitch Deck">
+          <p></p>
+          <p>We have a <a href="https://www.canva.com/design/DAG163H576E/yCYNMUNHgk7_46nTFuwNyA/edit?utm_content=DAG163H576E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">wireframe flowchart</a>.</p>
+          <img src="images/wireframeFlowchart.png" alt="Wireframe Flowchart">
         </div>
+
+        <!-- Overview -->
+        <div id="overview" class="content-region">
+          <h2>Overview</h2>
+          <p>Overview content goes here.</p>
+        </div>
+
+        <!-- Projections -->
+        <div id="projections" class="content-region">
+          <h2>Projections</h2>
+          <p>I have a 10-year projection that scales globally (US, China, Mexico, Japan) at reasonable growth. Virality will only accelerate it.</p>
+          <img src="images/10yearProjection.png" alt="10-year projection">
+          <p>Assumptions:</p>
+          <p>Over 10 years, the platform scales from 50 to about 2 million users globally, earning roughly $50 per user monthly, with steadily increasing revenue and flattening costs as operations mature. Costs grow early due to infrastructure, salaries, and marketing but stabilize over time, yielding gradual, sustainable profitability under conservative growth assumptions.</p>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- Section Switching -->
-    <script>
-      (function ($) {
-        $(window).on('load hashchange', function () {
-          $('.content-region').hide();
-          var region = location.hash || $('.main-menu a:first').attr('href');
-          $(region).show();
-          $('.main-menu a').removeClass('active');
-          $('.main-menu a[href="' + region + '"]').addClass('active');
-        });
-      })(jQuery);
-    </script>
-  </body>
+  <!-- Section Switching Script -->
+  <script>
+    (function($){
+      $(window).on('load hashchange', function(){
+        $('.content-region').hide();
+        var region = location.hash || '#current-status';
+        if($(region).length === 0) region = '#current-status'; // fallback if hash doesn't exist
+        $(region).show();
+        $('.main-menu a').removeClass('active');
+        $('.main-menu a[href="' + region + '"]').addClass('active');
+      });
+    })(jQuery);
+  </script>
+</body>
 </html>
