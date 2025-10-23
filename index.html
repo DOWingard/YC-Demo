@@ -6,7 +6,7 @@
   <meta name="description" content="A brief description of your site for search engines">
   <meta name="author" content="Information about the author here">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="images/logo.png">
 
   <!-- Stylesheets -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
@@ -19,6 +19,7 @@
   <style>
     :root {
       --maxw: 900px;
+      --muted: #6b7280;
       --accent: #0f172a;
       --card-bg: rgba(255, 255, 255, 0.85); /* semi-transparent white */
       --shadow: 0 6px 18px rgba(15,23,42,0.08);
@@ -38,7 +39,7 @@
     header {
       text-align: center;
       padding: 24px;
-      background: var(--card-bg); /* keep semi-transparent only */
+      background: var(--card-bg); /* semi-transparent header */
       box-shadow: var(--shadow);
       flex-shrink: 0;
       border-radius: 0 0 12px 12px;
@@ -80,7 +81,7 @@
       width: 100%;
       max-width: var(--maxw);
       margin: 0 18px;
-      background: var(--card-bg); /* semi-transparent only */
+      background: var(--card-bg); /* semi-transparent content card */
       border-radius: 12px;
       box-shadow: var(--shadow);
       padding: 28px;
@@ -91,6 +92,7 @@
     h2 { margin-top: 40px; font-size: 20px; }
     p, li { line-height: 1.55; }
     img { max-width: 100%; height: auto; margin-top: 10px; border-radius: 6px; box-shadow: var(--shadow); }
+    img + h2 { margin-top: 50px !important; }
 
     .content-region { display: none; }
     .content-region:first-of-type { display: block; }
@@ -126,11 +128,15 @@
             <li>Firebase authentication with MongoDB setup ready to host on Render.com</li>
             <li>Wireframe flowcharts</li>
           </ul>
+
           <p>We also have a small but growing group of interested Influencers/Artists, as well as an interested potential partner within the music advertising industry.</p>
+
           <p>The <a href="https://github.com/DOWingard/Analytics-Dashboard">Analytics Dashboard</a> presents a simple live plot of data stored in a SQL database:</p>
           <img src="images/charts.png" alt="Analytics Dashboard">
+
           <p>The <a href="https://www.canva.com/design/DAG2Shr5ZnA/omh515O8PKpyGZHoWszDSA/edit?utm_content=DAG2Shr5ZnA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Pitch Deck</a>:</p>
           <img src="images/weeds.jpg" alt="Pitch Deck">
+
           <p>We have a <a href="https://www.canva.com/design/DAG163H576E/yCYNMUNHgk7_46nTFuwNyA/edit?utm_content=DAG163H576E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">wireframe flowchart</a>.</p>
           <img src="images/wireframeFlowchart.png" alt="Wireframe Flowchart">
         </div>
@@ -146,7 +152,8 @@
           <h2>Projections</h2>
           <p>I have a 10-year projection that scales globally (US, China, Mexico, Japan) at reasonable growth. Virality will only accelerate it.</p>
           <img src="images/10yearProjection.png" alt="10-year projection">
-          <p>Over 10 years, the platform scales from 50 to ~2 million users globally, earning ~$50 per user monthly, with steadily increasing revenue and flattening costs as operations mature.</p>
+          <p>Assumptions:</p>
+          <p>Over 10 years, the platform scales from 50 to about 2 million users globally, earning roughly $50 per user monthly, with steadily increasing revenue and flattening costs as operations mature. Costs grow early due to infrastructure, salaries, and marketing but stabilize over time, yielding gradual, sustainable profitability under conservative growth assumptions.</p>
         </div>
 
       </div>
