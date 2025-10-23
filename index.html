@@ -1,92 +1,92 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <!-- Page setup -->
     <meta charset="utf-8">
-    <title>Your title here</title>
+    <title>Live for YC W26 Application Cycle</title>
     <meta name="description" content="A brief description of your site for search engines">
     <meta name="author" content="Information about the author here">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="icon" type="image/png" href="favicon.png">
-  
+
     <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
-    <!-- Custom styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
-
-    <!-- Want to add Bootstrap? -->
-    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
-    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   </head>
-  
-  <body>
 
+  <body>
     <header id="header">
-      <img src="logo.png">
+      <img src="logo.png" alt="Logo">
       <h1>Live for YC W26 Application Cycle</h1>
-      
-      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+
       <ul class="main-menu">
-        <li><a href="#Current Status">home</a></li>
-        <li><a href="#Overview">about</a></li>
-        <li><a href="#About">contact</a></li>
-      </ul>                 
+        <li><a href="#current-status">Home</a></li>
+        <li><a href="#overview">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </header>
-   
+
     <div id="container">
       <div class="inner">
-        <div id="content"> 
-          
-          <div id="Current Status" class="content-region hide">
+        <div id="content">
+          <div id="current-status" class="content-region">
             <h2>Current Status since 10/12</h2>
             <p>
-            We have built the following:
-              * React Native app scaffolding
-              * Initial custom live analytics dashboard with interactive console
-              * Main project hosted in GitLab for sophisticated CI/CD tools
-              * Firebase authentification with MongoDB setup and querie-able, ready to host for free using Render.com. 
-              * Wireframe flowcharts
-            We also have a small but growing group of interested Influencers/Artists
+              We have built the following:
+              <ul>
+                <li>React Native app scaffolding</li>
+                <li>Initial custom live analytics dashboard with interactive console</li>
+                <li>Main project hosted in GitLab for sophisticated CI/CD tools</li>
+                <li>Firebase authentication with MongoDB setup ready to host on Render.com</li>
+                <li>Wireframe flowcharts</li>
+              </ul>
+              We also have a small but growing group of interested Influencers/Artists.
+            </p>
 
+            <p>The <a href="#">pitch deck</a> TODO INSERT LINK</p>
 
-              The @link(pitch deck):
-              TODO INSERT LINK
-              <img src="images/weeds.jpg" alt="Competition" style="max-width:100%; height:auto; margin-top:10px;">
-
-              We have a <a href="https://www.canva.com/design/DAG163H576E/yCYNMUNHgk7_46nTFuwNyA/edit?utm_content=DAG163H576E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">wireframe flowchart</a> using a different brand idea.
-              <img src="images/wireframeFlowchart.png" alt="Wireframe Flowchart" style="max-width:100%; height:auto; margin-top:10px;">
+            <img src="images/weeds.jpg" alt="Competition" style="max-width:100%; height:auto; margin-top:10px;">
+            <p>
+              We have a <a href="https://www.canva.com/design/DAG163H576E/yCYNMUNHgk7_46nTFuwNyA/edit?utm_content=DAG163H576E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">wireframe flowchart</a>.
+            </p>
+            <img src="images/wireframeFlowchart.png" alt="Wireframe Flowchart" style="max-width:100%; height:auto; margin-top:10px;">
           </div>
-          
-          <div id="Overview" class="content-region hide">
+
+          <div id="overview" class="content-region">
             <h2>Overview</h2>
             <p>
-              Overview. 
+              Overview content goes here.
             </p>
           </div>
-          
-          <div id="About" class="content-region hide">
-            <h2>About</h2>
+
+          <div id="contact" class="content-region">
+            <h2>Contact</h2>
             <p>
-              About. 
+              Contact content goes here.
             </p>
           </div>
-          
         </div>
       </div>
     </div>
 
-    <footer>  
+    <footer>
       Footer region
     </footer>
-    
-    <!-- Load additional JS scripts here -->
-    <script type="text/javascript" src="script.js"></script>
-    
+
+    <!-- Custom Script -->
+    <script type="text/javascript">
+      (function ($) {
+        $(window).on('load hashchange', function() {
+          $('.content-region').hide(); // hide all regions
+          var region = location.hash || $('.main-menu a:first').attr('href'); // get hash or default
+          $(region).show(); // show the selected region
+          $('.main-menu a').removeClass('active');
+          $('.main-menu a[href="'+ region +'"]').addClass('active'); // highlight menu
+        });
+      })(jQuery);
+    </script>
   </body>
 </html>
