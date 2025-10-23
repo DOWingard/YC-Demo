@@ -21,7 +21,7 @@
       --maxw: 900px;
       --muted: #6b7280;
       --accent: #0f172a;
-      --card: #ffffff;
+      --card-bg: rgba(255, 255, 255, 0.85); /* semi-transparent white */
       --shadow: 0 6px 18px rgba(15,23,42,0.08);
       font-family: Inter, Roboto, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
     }
@@ -33,14 +33,17 @@
       background-size: cover;
       display: flex;
       flex-direction: column;
+      color: #0f172a;
     }
 
     header {
       text-align: center;
       padding: 24px;
-      background: var(--card);
+      background: var(--card-bg); /* semi-transparent header */
       box-shadow: var(--shadow);
       flex-shrink: 0;
+      border-radius: 0 0 12px 12px;
+      backdrop-filter: blur(6px);
     }
 
     header img { height: 60px; margin-bottom: 12px; }
@@ -70,19 +73,20 @@
       flex: 1;
       display: flex;
       justify-content: center;
-      padding-bottom: 36px;
+      padding: 36px 0;
+      width: 100%;
     }
 
     .inner {
       width: 100%;
       max-width: var(--maxw);
-      margin: 36px 18px;
-      background: var(--card);
+      margin: 0 18px;
+      background: var(--card-bg); /* semi-transparent content card */
       border-radius: 12px;
       box-shadow: var(--shadow);
       padding: 28px;
       box-sizing: border-box;
-      backdrop-filter: blur(6px); /* optional: soft blur for transparency effect */
+      backdrop-filter: blur(6px);
     }
 
     h2 { margin-top: 40px; font-size: 20px; }
