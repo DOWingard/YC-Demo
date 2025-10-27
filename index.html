@@ -19,20 +19,10 @@
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
   <style>
-    /* Uniform media size */
+    /* Uniform media width, preserve aspect ratio */
     .media {
-      width: 640px;
-      height: 360px;
-      object-fit: cover;
-      display: block;
-      margin: 20px 0;
-      border: 1px solid #ccc;
-    }
-
-    /* Actual size for specific video */
-    .media-original {
-      width: auto;
-      height: auto;
+      width: 640px;     /* uniform width */
+      height: auto;     /* auto height to preserve aspect ratio */
       display: block;
       margin: 20px 0;
       border: 1px solid #ccc;
@@ -72,8 +62,7 @@
             <li>Added messaging</li>
             <li>Integrated Stripe into the profile</li>
           </ul>
-          <!-- Video displayed at actual size -->
-          <video class="media-original" controls>
+          <video class="media" controls>
             <source src="videos/appDemo2.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
