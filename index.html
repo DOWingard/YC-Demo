@@ -49,28 +49,27 @@
         <div id="current-status" class="content-region hide">
           <h2>Current Status since starting on 10/12</h2>
           <h2>10/27 part 2</h2>
-          <ul> 
-          <p><a href="https://github.com/DOWingard/Analytics-Dashboard/blob/main/README.md">Dashboard README.md</a></p>
-            <li>Containerized a PostgreSQL db with suit of control scripts</li>
-            <li>Some custom micro-clients and micro-apis started</li>
-            <li>Kind of broke plotting but I think its just an annoying html issue...</li>
-            <li>Front end container is ready</li>
-            <li>Back end container is ready for SSH tunnel for remote demo live analytics with async queries</li>
-             <ul>
-
+          <ul>
+              <li><a href="https://github.com/DOWingard/Analytics-Dashboard/blob/main/README.md">Dashboard README.md</a></li>
+              <li>Containerized a PostgreSQL db with suit of control scripts</li>
+              <li>Some custom micro-clients and micro-apis started</li>
+              <li>Kind of broke plotting but I think it's just an annoying HTML issue...</li>
+              <li>Front end container is ready</li>
+              <li>Back end container is ready for SSH tunnel for remote demo live analytics with async queries</li>
+          </ul>
 
           <h2>10/27</h2>
           <ul>
-            <li>Live Analytics interface updated, includes toggle-able series and runway calculator</li>
-            <li>Linked the Analytics class object to call methods from interactive terminal</li>
-            <li>Analytics class new features
-                <ul>
-                    <li>Represents datasets on chebyshev basis over [-1,1], rescaled to original</li>
-                    <li>printDB shows all columns</li>
-                    <li>void.model plots any dataset against any other from the DB</li>
-                    <li>modelDeriv plots the derivative derivative, can be taken recursively (tested on cubic function)</li>
-                    
-                </ul>
+              <li>Live Analytics interface updated, includes toggle-able series and runway calculator</li>
+              <li>Linked the Analytics class object to call methods from interactive terminal</li>
+              <li>Analytics class new features:
+                  <ul>
+                      <li>Represents datasets on Chebyshev basis over [-1,1], rescaled to original</li>
+                      <li>printDB shows all columns</li>
+                      <li>void.model plots any dataset against any other from the DB</li>
+                      <li>modelDeriv plots the derivative, can be taken recursively (tested on cubic function)</li>
+                  </ul>
+              </li>
           </ul>
           <img src="images/liveAnalytics.png" alt="Live Analytics" class="media">
           <p>Random Data</p>
