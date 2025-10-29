@@ -47,17 +47,28 @@
 
         <!-- Current Status / Home -->
         <div id="current-status" class="content-region hide">
-          <h2>Current Status since starting on 10/12</h2>
-          <h2>10/28</h2>
+          <h2>Current Status</h2>
+          <h2>10/29 Complete Analytics database and Interaction CLI</h2>
           <ul>
+              <li>Container now safely spins up with an exposed ssh server and Postgres db</li>
+              <ul>
+                  <li>Depending on where this gets ultimately stored, this could make it super easy to access for quick checks</li>
+              </ul>
+              <li>Built a lightweight CLI itnerface to interacting with a remote database at <a href="https://github.com/DOWingard/Remote-DB-access-manager-CLI/tree/main">Manager CLI Repository</a></li>
+              <ul>
+                  <li>Allows users to check if db is active, the admins, and a basic info printout</li>
+                  <li>Script separates superusers from users so it can be spread to more people later on</li>
+                  <li>This lightweight CLI could allow us to have a reallllly cheap server to manage in hosue data where all we care about is serverside security</li>
+                  <li>TODO: Integrate whatever db co-founder builds for app backend</li>
+                  <li>TODO: Build private distribution curl link with user/superuser discression</li>
+              </ul>
               <li>Brought in the demo AI recommendation system (mostly a smart filter atm) to the analytics repo and the main app repo</li>
-
           </ul>
 
 
 
 
-          <h2>10/27 part 2</h2>
+          <h2>10/27 - Started in house analytics db and dev scripts</h2>
           <ul>
               <li><a href="https://github.com/DOWingard/Analytics-Dashboard/blob/main/README.md">Dashboard README.md</a></li>
               <li>Containerized a PostgreSQL db with suit of control scripts</li>
@@ -67,7 +78,7 @@
               <li>Back end container is ready for SSH tunnel for remote demo live analytics with async queries</li>
           </ul>
 
-          <h2>10/27 </h2>
+          <h2>10/27 - Basic in house analytics interface built</h2>
           <ul>
               <li>Live Analytics interface updated, includes toggle-able series and runway calculator</li>
               <li>Linked the Analytics class object to call methods from interactive terminal</li>
@@ -85,7 +96,7 @@
           <img src="images/model1.png" alt="Random Data" class="media">
           <img src="images/model2.png" alt="Derivative" class="media">
 
-          <h2>10/24</h2>
+          <h2>10/24 - Front end updates and stripe integration</h2>
           <ul>
             <li>Added live analytics</li>
             <li>Added messaging</li>
@@ -96,7 +107,7 @@
             Your browser does not support the video tag.
           </video>
 
-          <h2>10/22</h2>
+          <h2>10/22 - Initial progress dump</h2>
           <ul>
             <li>React Native app scaffolding with Social API endpoints (no key linkings yet) → TODO: centralize storage in MongoDB</li>
             <li>Initial custom live analytics dashboard with interactive console</li>
@@ -121,6 +132,8 @@
           <p>We have a wireframe flowchart.</p>
           <p><a href="https://www.canva.com/design/DAG163H576E/yCYNMUNHgk7_46nTFuwNyA/edit?utm_content=DAG163H576E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">https://www.canva.com/design/DAG163H576E/yCYNMUNHgk7_46nTFuwNyA/edit?utm_content=DAG163H576E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton</a></p>
           <img src="images/wireframeFlowchart.png" alt="Wireframe Flowchart" class="media">
+
+          <h2>10/12 - Came up with idea and started building</h2>
 
         </div>
 
