@@ -48,7 +48,17 @@
         <!-- Current Status / Home -->
         <div id="current-status" class="content-region hide">
           <h2>Current Status</h2>
-          
+
+          <h2>11/3 Backend rebuild to simplify</h2>
+          <ul>
+              <li>Front end ignored for time being, backend needs more attention</li>
+              <li>Sign up now requires full profile + payment method\li>
+              <li>Rebuilt user db and api to more easily manage: intake, list job, claim job/li>
+              <li>De-spaghetti-ed the firebase to local DB handoff</li>
+              <li>Split user experience between artist/influencer</li>
+              <li>Post sign in validation depends on local authorization now to avoid Firebase queries</li>
+                <li>TODO:Fix frontend to properly interact with updated api</li>
+          </ul>
           <h2>10/30 Streaming lining for MVP build</h2>
           <ul>
               <li>Whole system depends on the local Postgres container with firebase auth</li>
