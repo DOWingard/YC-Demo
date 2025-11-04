@@ -152,6 +152,6 @@ ul.main-menu li a.active {
 img[src="images/style1.png"],
 img[src="images/style2.png"],
 img[src="images/style3.png"] {
-  max-height: 300px;
+  max-height: 400px;
   width: auto;
 }
