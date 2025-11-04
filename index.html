@@ -50,15 +50,16 @@
           <h2>Current Status</h2>
           <h2>11/4 Backend Triggers for logging events and transations</h2>
           <ul>
+            <li>Action vs DB event</li>
             <ul>
-            <li>Artist → Job
+                <li>Artist         --> | Creates campaign                   | --> Job[Jobs Table]</li>
+                <li>Influencer     --> | Claims job                         | --> Influencer_Job[influencer_jobs Table]</li>
+                <li>Influencer_Job --> | Trigger trg_create_escrow_on_claim | --> Escrow[Escrow Transactions]</li>
+                <li>Escrow         --> | Trigger on INSERT                  | --> Event1[Escrow Events: "claimed"]</li>
+                <li>Escrow         --> | Trigger on status update           | --> Event2[Escrow Events: "released"]</li>
+                <li>Escrow         --> | Trigger on release/payment         | --> Event3[Escrow Events: "Influencer_paid"]</li>
+              <li>Artist → Job
               <ul>
-                <li>* Artist         --> | Creates campaign                   | --> Job[Jobs Table]</li>
-                <li>* Influencer     --> | Claims job                         | --> Influencer_Job[influencer_jobs Table]</li>
-                <li>* Influencer_Job --> | Trigger trg_create_escrow_on_claim | --> Escrow[Escrow Transactions]</li>
-                <li>* Escrow         --> | Trigger on INSERT                  | --> Event1[Escrow Events: "claimed"]</li>
-                <li>* Escrow         --> | Trigger on status update           | --> Event2[Escrow Events: "released"]</li>
-                <li>* Escrow         --> | Trigger on release/payment         | --> Event3[Escrow Events: "Influencer_paid"]</li>
                 <li>Influencer → influencer_jobs (claim)
                   <ul>
                     <li>trg_create_escrow_on_claim
