@@ -48,6 +48,57 @@
         <!-- Current Status / Home -->
         <div id="current-status" class="content-region hide">
           <h2>Current Status</h2>
+          <h2>11/7 Backend update to address unfilled campaign refunds</h2>
+          <li>Closing campaign without completing logs issue and refund claim</li>
+          <li>Active container worker now closes complete jobs and issues refunds every 24hr</li>
+          <li>Updated backend for refund management after incomplete job</li>
+          <li>
+            <li>
+                <pre>
+              Artist ---> Job
+                              \
+              Influencer ---> influencer_jobs (claim)
+                              \
+                                trg_create_escrow_on_claim
+                                      \
+                                      escrow_transactions
+                                      |
+                                      | escrow_claim_trigger
+                                      v
+                                escrow_events ('claimed')
+
+              Escrow status updated ('released')
+                      |
+                      v
+                escrow_released_trigger
+                      |
+                      +--> escrow_events ('released')
+                      +--> wallet update for influencer
+                      +--> escrow_events ('influencer_paid')
+
+              Job closed (closed_at set)
+                      |
+                      +--> trg_create_unfilled_refund -> unfilled_refunds
+                                |
+                                +--> log_refund_to_escrow_events -> escrow_events ('refund')
+                      +--> jobs_closed_at_logging -> joblogs
+                      +--> trg_prevent_updates_after_closed -> system_logs
+
+              unfilled_refunds.issued_at set
+                      |
+                      +--> log_refund_to_escrow_events -> escrow_events
+                      +--> prevent_modifications_after_refund_issued -> system_logs
+                </pre>
+              </li>
+
+          </li>
+          <li>Campaigns store stripe purchase ID</li>
+          <ul>
+            <li>TODO: Streamline influencer to Stripe Connect onboarding for payout</li>
+            <li>TODO: Implement claim based refund command for worker to call</li>
+            <li>TODO: Implement refund off worker command</li>
+          </ul>
+
           <h2>11/6 Full stack updates for MVP user experience</h2>
           <ul>
             <li>Implimented "content complete : content approved : job closed" functionality for artists and influencers</li>
