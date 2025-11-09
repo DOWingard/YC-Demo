@@ -48,6 +48,53 @@
         <!-- Current Status / Home -->
         <div id="current-status" class="content-region hide">
           <h2>Current Status</h2>
+          <h2>11/8 Backend testing, management, and front end optimization</h2>
+          <li>Jobs for influencers filter by genre and location</li>
+          <li>Setting Location and Genres at signup and edit profile properly interacts with backend</li>
+          <li>Influencers set withdrawal on profile</li>
+          <li>System protects against closing on influencers work</li>
+          <li>Forced Read-Only on "closed" rows in the db</li>
+          <li>Influencer Approvals dependent on work being submitted per artist now</li>
+          <li>Extra logging for issues and closures</li>
+          <li>Updates:
+            <ul>
+              <li>Job closed (closed_at set)
+                <ul>
+                  <li>trg_create_unfilled_refund → unfilled_refunds
+                    <ul>
+                      <li>log_refund_to_escrow_events → escrow_events ('refund')</li>
+                    </ul>
+                  </li>
+                  <li>jobs_closed_at_logging → joblogs</li>
+                  <li>trg_prevent_updates_after_closed → system_logs</li>
+                </ul>
+              </li>
+              <li>influencer_jobs.closed_at set
+                <ul>
+                  <li>trg_influencer_payout → influencer_payouts</li>
+                  <li>trg_log_unapproved_closure → influencer_logs</li>
+                </ul>
+              </li>
+              <li>unfilled_refunds.issued_at set
+                <ul>
+                  <li>log_refund_to_escrow_events → escrow_events</li>
+                  <li>prevent_modifications_after_refund_issued → system_logs</li>
+                </ul>
+              </li>
+              <li>users.wallet update attempted &lt;0
+                <ul>
+                  <li>prevent_negative_wallet() → system_logs</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Iniital DB setup for platform and influencer analytics</li>
+          <ul>
+            <li>TODO: Set up triggers to fill the most immediately useful fields</li>
+            <li>TODO: Set the analytics intergace to work from the analytics db, clone it, separate the two, and set up periodic filling triggers</li>
+          </ul>
+          <li> TODO: Write TOS and ensure users have agreed to use platform</li>
+
           <h2>11/7 Backend update to address unfilled campaign refunds</h2>
           <li>Closing campaign without completing logs issue and refund claim</li>
           <li>Active container worker now closes complete jobs and issues refunds every 24hr</li>
