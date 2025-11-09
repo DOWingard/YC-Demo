@@ -47,8 +47,55 @@
 
         <!-- Current Status / Home -->
         <div id="current-status" class="content-region hide">
-          <h2>Current Status</h2>            
+          <h2>Current Status</h2>     
 
+          <h2>11/8 Part 2: analytics backend updates</h2>
+          <li>Added daily workers to log entries into analytics db</li>
+          <section id="analytics-tables">
+          <h2>Platform Analytics</h2>
+          <table>
+            <thead>
+              <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>date</td><td>date (PK)</td><td>Analytics date</td></tr>
+              <tr><td>total_users</td><td>int</td><td>Total users in users table</td></tr>
+              <tr><td>total_artists</td><td>int</td><td>Total users with user_type='artist'</td></tr>
+              <tr><td>total_influencers</td><td>int</td><td>Total users with user_type='influencer'</td></tr>
+              <tr><td>active_users_daily</td><td>int</td><td>Users active in last 24 hours</td></tr>
+              <tr><td>jobs_created</td><td>int</td><td>Total jobs created</td></tr>
+              <tr><td>jobs_closed</td><td>int</td><td>Total jobs with closed_at NOT NULL</td></tr>
+              <tr><td>influencers_paid</td><td>int</td><td>Total influencer_payouts</td></tr>
+              <tr><td>full_job_rate</td><td>numeric(5,4)</td><td>Fraction of closed jobs where claim_count ≥ max_slots</td></tr>
+              <tr><td>current_open_jobs</td><td>int</td><td>Total jobs with closed_at IS NULL</td></tr>
+            </tbody>
+          </table>
+
+          <h2>Financial Analytics</h2>
+          <table>
+            <thead>
+              <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>date</td><td>date (PK)</td><td>Analytics date</td></tr>
+              <tr><td>total_payouts</td><td>numeric</td><td>Sum of influencer_payouts.amount</td></tr>
+              <tr><td>payouts_count</td><td>int</td><td>Total influencer_payouts entries</td></tr>
+              <tr><td>total_refunds</td><td>numeric</td><td>Sum of unfilled_refunds.refunded</td></tr>
+              <tr><td>refunds_count</td><td>int</td><td>Total unfilled_refunds entries</td></tr>
+              <tr><td>total_paid_for_campaigns</td><td>numeric</td><td>Sum of all campaign budgets</td></tr>
+              <tr><td>net_revenue</td><td>numeric</td><td>Total_paid_for_campaigns - total_refunds - total_payouts</td></tr>
+              <tr><td>largest_single_payout</td><td>numeric</td><td>Largest influencer_payouts.amount</td></tr>
+              <tr><td>largest_single_refund</td><td>numeric</td><td>Largest unfilled_refunds.refunded</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <style>
+          #analytics-tables table { border-collapse: collapse; width: 100%; margin-bottom: 1em; }
+          #analytics-tables th, #analytics-tables td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+          #analytics-tables th { background-color: #f0f0f0; }
+          #analytics-tables h2 { margin-top: 1em; font-size: 1.2em; }
+        </style>
 
           <h2>11/8 Backend testing, management, and front end optimization</h2>
           <li>Jobs for influencers filter by genre and location</li>
